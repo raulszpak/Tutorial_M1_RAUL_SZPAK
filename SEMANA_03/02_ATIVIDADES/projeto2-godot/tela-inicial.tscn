@@ -1,0 +1,198 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tela-inicial.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="dado1" type="LineEdit" parent="."]
+margin_left = 40.0
+margin_top = 107.0
+margin_right = 132.0
+margin_bottom = 156.0
+
+[node name="dado2" type="LineEdit" parent="."]
+margin_left = 227.0
+margin_top = 107.0
+margin_right = 319.0
+margin_bottom = 156.0
+
+[node name="dado3" type="LineEdit" parent="."]
+margin_left = 412.0
+margin_top = 108.0
+margin_right = 504.0
+margin_bottom = 157.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 41.0
+margin_top = 51.0
+margin_right = 123.0
+margin_bottom = 94.0
+text = "Dado 1"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 231.0
+margin_top = 51.0
+margin_right = 313.0
+margin_bottom = 94.0
+text = "Dado 2"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 419.0
+margin_top = 54.0
+margin_right = 501.0
+margin_bottom = 97.0
+text = "Dado 3"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 175.0
+margin_top = 304.0
+margin_right = 370.0
+margin_bottom = 340.0
+text = "Clique aqui!"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 122.0
+margin_top = 186.0
+margin_right = 417.0
+margin_bottom = 277.0
+
+[node name="resposta" type="Label" parent="ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 251.0
+margin_top = 17.0
+margin_right = 290.0
+margin_bottom = 76.0
+align = 1
+valign = 1
+
+[node name="respostaoperador1" type="Label" parent="ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 73.0
+margin_top = 35.0
+margin_right = 99.0
+margin_bottom = 54.0
+align = 1
+valign = 1
+
+[node name="respostaoperador2" type="Label" parent="ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 164.0
+margin_top = 36.0
+margin_right = 190.0
+margin_bottom = 55.0
+align = 1
+valign = 1
+
+[node name="rd1" type="Label" parent="ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 21.0
+margin_top = 34.0
+margin_right = 47.0
+margin_bottom = 53.0
+align = 1
+valign = 1
+
+[node name="rd2" type="Label" parent="ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 120.0
+margin_top = 36.0
+margin_right = 146.0
+margin_bottom = 55.0
+align = 1
+valign = 1
+
+[node name="rd3" type="Label" parent="ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 206.0
+margin_top = 38.0
+margin_right = 232.0
+margin_bottom = 57.0
+align = 1
+valign = 1
+
+[node name="operador1x" type="Button" parent="."]
+margin_left = 172.0
+margin_top = 56.0
+margin_right = 192.0
+margin_bottom = 76.0
+text = "X"
+icon_align = 1
+
+[node name="operador1x2" type="Button" parent="."]
+margin_left = 357.0
+margin_top = 55.0
+margin_right = 377.0
+margin_bottom = 75.0
+text = "X"
+icon_align = 1
+
+[node name="operador2ma" type="Button" parent="."]
+margin_left = 172.0
+margin_top = 87.0
+margin_right = 192.0
+margin_bottom = 107.0
+text = "+"
+icon_align = 1
+
+[node name="operador2ma2" type="Button" parent="."]
+margin_left = 357.0
+margin_top = 88.0
+margin_right = 377.0
+margin_bottom = 108.0
+text = "+"
+icon_align = 1
+
+[node name="operador3me" type="Button" parent="."]
+margin_left = 172.0
+margin_top = 119.0
+margin_right = 192.0
+margin_bottom = 139.0
+text = "-"
+icon_align = 1
+
+[node name="operador3me2" type="Button" parent="."]
+margin_left = 357.0
+margin_top = 118.0
+margin_right = 377.0
+margin_bottom = 138.0
+text = "-"
+icon_align = 1
+
+[node name="operador4" type="Button" parent="."]
+margin_left = 172.0
+margin_top = 152.0
+margin_right = 192.0
+margin_bottom = 172.0
+text = "/"
+icon_align = 1
+
+[node name="operador5" type="Button" parent="."]
+margin_left = 360.0
+margin_top = 150.0
+margin_right = 380.0
+margin_bottom = 170.0
+text = "/"
+icon_align = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="operador1x" to="." method="_on_operador1x_pressed"]
+[connection signal="pressed" from="operador1x2" to="." method="_on_operador1x2_pressed"]
+[connection signal="pressed" from="operador2ma" to="." method="_on_operador2ma_pressed"]
+[connection signal="pressed" from="operador2ma2" to="." method="_on_operador2ma2_pressed"]
+[connection signal="pressed" from="operador3me" to="." method="_on_operador3me_pressed"]
+[connection signal="pressed" from="operador3me2" to="." method="_on_operador3me2_pressed"]
+[connection signal="pressed" from="operador4" to="." method="_on_operador4_pressed"]
+[connection signal="pressed" from="operador5" to="." method="_on_operador5_pressed"]
